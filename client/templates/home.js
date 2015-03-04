@@ -8,7 +8,7 @@ Template.home.helpers({
     if(randomNum > 0.5)
     {
       woopra.track("versionA");
-      return "/addChallenge";
+      return "/best";
     }
     else
     {

@@ -24,6 +24,8 @@ Template.postSubmit.events({
       description: $(e.target).find('[name=description]').val(),
       category: 'hello'
     };
+
+      woopra.track("addedChallenge");
     
     // var errors = validatePost(post);
     // if (errors.title || errors.url)

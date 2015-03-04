@@ -17,27 +17,22 @@
           </li> -->
 
              <li class="{{activeRouteClass 'addChallenge'}}">
-              <a href="{{pathFor 'addChallenge'}}">-TODAY'S CHALLENGES-</a>
+              <a href="{{pathFor 'addChallenge'}}"> <i class="fa fa-star"></i> Add a Challenge</a>
             </li>
 
             <li class="{{activeRouteClass 'bestPosts'}}">
-            <a href="{{pathFor 'bestPosts'}}">-Community-</a>
+            <a href="{{pathFor 'bestPosts'}}"><i class="fa fa-globe"></i> Community</a>
           </li>
           {{#if currentUser}}
 
           <li class="{{activeRouteClass 'newPosts'}}">
-            <a href="{{pathFor 'newPosts'}}">-Profile-</a>
+            <a href="{{pathFor 'newPosts'}}"><i class="fa fa-user"></i> Profile</a>
           </li>
-
-
-            <li class="{{activeRouteClass 'postSubmit'}}">
-              <a href="{{pathFor 'postSubmit'}}">-Add A Challenge-</a>
-            </li>
 
           {{/if}}
 
           <li class="{{activeRouteClass  'aboutPage'}}">
-            <a href="{{pathFor 'aboutPage'}}">-About Us-</a>
+            <a href="{{pathFor 'aboutPage'}}"><i class="fa fa-heart"></i> About Us</a>
           </li>
 
           {{#if currentUser}}

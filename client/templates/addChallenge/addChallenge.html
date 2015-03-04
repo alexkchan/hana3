@@ -1,4 +1,7 @@
 <template name="addChallenge">
+    
+
+
      <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -7,14 +10,22 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1492518170992676&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<script>var $daniel="SESE"</script>
+
+
+
      <!-- Portfolio Grid Section -->
     <section id="portfolio" style="background:#33ADFF">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading" style="color:#fff">Today's Challenges {{lastestPostURL}} $daniel</h2>
-                    <h3 class="section-subheading text-muted"> </h3>
+                    <h1 class="section-heading" style="color:#fff;border-bottom:#fff 1px solid">Add A Challenge</h1>
+                        <div>
+                            <h3 style="color:#fff">1.  Share what you've accomplished by 
+                                  <a href="{{pathFor 'postSubmit'}}" class="btn-warning">clicking here</a>
+                            </h3>
+                            <h3 style="color:#fff"> or </h3>
+                            <h3 style="color:#fff"> 2. Choose from the featured challenges below </h3>
+                        </div>
                 </div>
             </div>
             <div class="row">
