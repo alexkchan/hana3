@@ -15,10 +15,14 @@ Template.postSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
     
+    console.log('HELLO');
+
     var post = {
-      url: $(e.target).find('[name=url]').val(),
+      // url: $(e.target).find('[name=url]').val(),
+      url: $("#url").val(),
       title: $(e.target).find('[name=title]').val(),
-      description: $(e.target).find('[name=description]').val()
+      description: $(e.target).find('[name=description]').val(),
+      category: 'hello'
     };
     
     // var errors = validatePost(post);
