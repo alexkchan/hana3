@@ -1,23 +1,25 @@
 <!-- PRIVATE -->
 
-<!-- Auto-refresh is a bad solution for a dynamically updating color thing -->
-<!-- <head>
-  <meta http-equiv="refresh" content="5" >
-</head> --> 
-
 <template name="postsList">
 
    <section id="portfolio" style="background:#33ADFF">
 
 
   <div  class="wellnessIndex">
-      <p style="font-size:4ex">
-          You have completed {{numPosts}} challenges!
-      </p>
+      
       <svg height="300" width="300" x>
-        <circle id="indexCircle" cx="150" cy="150" r="150" stroke="none" stroke-width="3" fill={{indexColor}} />
+        <circle cx="150" cy="150" r="150" stroke="none" stroke-width="3" fill={{indexColor}} />
+        <text x="100" y="150" font-family="sans-serif" font-size="20px" fill="white">WELLBEING</text>
+
       </svg>
 
+      <h1 class="section-heading" style="color:#fff">
+          You have completed {{numPosts}} challenges!
+      </h1>
+
+      <h4 class="section-heading" style="color:#fff;font-size:15px;font-weight:lighter">
+          Keep your wellness index green by completing more challenges! <a style="font-size:18px" href="/addChallenge" class="btn-warning">Click Me {{lastestPostURL}}</a>
+      </h4>
   </div>
 
   <div class="posts" style="border:none">

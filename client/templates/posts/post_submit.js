@@ -15,14 +15,13 @@ Template.postSubmit.events({
   'submit form': function(e) {
     e.preventDefault();
     
-    console.log('HELLO');
+    woopra.track("addedChallenge");
 
     var post = {
-      // url: $(e.target).find('[name=url]').val(),
-      url: $("#url").val(),
+      url: $(e.target).find('[name=url]').val(),
       title: $(e.target).find('[name=title]').val(),
       description: $(e.target).find('[name=description]').val(),
-      category: 'hello'
+      category: ''
     };
     
     // var errors = validatePost(post);
