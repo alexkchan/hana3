@@ -7,11 +7,129 @@
 
   <div  class="wellnessIndex">
       
-      <svg height="300" width="300" x>
+     <!-- <svg height="300" width="300" x>
         <circle cx="150" cy="150" r="150" stroke="none" stroke-width="3" fill={{indexColor}} />
         <text x="100" y="150" font-family="sans-serif" font-size="20px" fill="white">WELLBEING</text>
 
-      </svg>
+      </svg>-->
+
+<script>
+
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Your Challenges by Category'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+         credits: {
+           enabled: false
+       },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'HANA Index',
+            data: [
+    
+                {
+                    name: 'Relationship',
+                    y: 33.3,
+                    sliced: true,
+                    selected: true
+                },
+                ['Health',    33.3],
+                ['Aspiration',     33.3]
+            ]
+        }]
+    });
+});
+
+</script>
+
+<script>
+$(function () {
+    $('#container2').highcharts({
+        chart: {
+            type: 'areaspline'
+        },
+        title: {
+            text: 'Challenge'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 150,
+            y: 100,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        },
+        xAxis: {
+            categories: [
+                'Monday',
+                'Tuesday',
+                'Wednesday',
+                'Thursday',
+                'Friday',
+                'Saturday',
+                'Sunday'
+            ],
+            plotBands: [{ // visualize the weekend
+                from: 4.5,
+                to: 6.5,
+                color: 'rgba(68, 170, 213, .2)'
+            }]
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit units'
+            }
+        },
+        tooltip: {
+            shared: true,
+            valueSuffix: ' units'
+        },
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            areaspline: {
+                fillOpacity: 0.5
+            }
+        },
+        series: [{
+            name: 'One Challenge A Day',
+            data: [1, 2, 3, 4, 5, 6, 7]
+        }, {
+            name: 'Jane',
+            data: [0,0,0,0,0,0,0]
+        }]
+    });
+});
+</script>
+
+
+<div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">H</div>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
       <h1 class="section-heading" style="color:#fff">
           You have completed {{numPosts}} challenges!
@@ -22,7 +140,9 @@
       </h4>
   </div>
 
-  <div class="posts" style="border:none">
+
+  <div id="wrapper1">
+            <div id="columns1">
     {{#each postsWithRank}}
       {{#if ownPost}} 
         {{> postItem}}
@@ -37,5 +157,7 @@
       {{/unless}}
     {{/if}}
   </div>
+</div>
 </section>
+ 
 </template>

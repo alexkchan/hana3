@@ -2,6 +2,7 @@
 
 <template name="publicPostList">
 
+
    <section id="portfolio" style="background:#33ADFF">
 
 
@@ -16,8 +17,8 @@
       </h4>
   </div>
 
-  <div class="posts" style="border:none">
-    
+  <div id="wrapper1">
+            <div id="columns1">
       <!-- {{#if ownPost}} -->
       {{#each posts}}
         {{> postItem}}
@@ -32,6 +33,7 @@
         {{> spinner}}
       {{/unless}}
     {{/if}}
+  </div>
   </div>
 </section>
 </template>

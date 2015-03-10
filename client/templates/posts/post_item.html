@@ -1,22 +1,50 @@
-<template name="postItem">
-  <div class="post" {{attributes}}>
-     <a href="#" class="upvote btn btn-default {{upvotedClass}}"><i class="fa fa-arrow-circle-o-up fa-2x"></i></a> 
-    <div class="post-content" style="width: 100%;">
+
+
+  <template name="postItem">
+
+
      
-      <div class="iframe-container" style="float:left; width: 50%;">
+       <div class="pin1">
+
+    <p style="text-align:center;margin-top:0px; font-weight:bold">{{title}}</p>
+     <a href="#" class="upvote btn btn-default {{upvotedClass}}" style="position:relative;margin-bottom:-40px"><i class="fa fa-arrow-circle-o-up fa-1x"></i></a> 
+        <a href="{{pathFor 'postPage'}}"><img class="img-responsive shadows" onError="this.onerror=null;this.src='http://echurchdepot.zurltd.netdna-cdn.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/7/3/739260007138L_3.jpg'" width="560" height="315" src="{{url}}"  alt=""></a>
+          <p>{{#if ownPost}}
+          <p> {{submitted}}</p> <a href="{{pathFor 'postEdit'}}">   Edit</a>{{/if}}  </p>
+          <p><i class="fa fa-heart fa-1x"></i> {{pluralize votes "Vote"}}, submitted by {{author}}, {{category}} </p>
+          <p> Description: {{description}} </p>
+          <div style="text-align:right">
+ <a href="{{pathFor 'postPage'}}" class=" btn btn-default" style="padding:0px;border-radius:0px">View Post</a> 
+  </div>
+      </div>
+      
+</template>
+
+<!--
+
+
+  <template name="postItem">
+  <div class="post" {{attributes}}>
+     <h2 style="text-align:center;margin-top:0px">{{title}}</h2>
+     <a href="#" class="upvote btn btn-default {{upvotedClass}}"><i class="fa fa-arrow-circle-o-up fa-2x"></i></a> 
+    <div class="post-content " style="width:100%">
+     
+      <div class="iframe-container smallImage" style="float:left; ">
         <img class="img-responsive" width="560" height="315" src="{{url}}" alt="">
       </div>
       
       <div class="post-description" style="float:right; width: 50%; padding: 2%">
         <div style="text-align:left">       
-          <h2>{{title}}</h2>
+         
           <p>{{#if ownPost}}
           <p> {{submitted}}</p> <a href="{{pathFor 'postEdit'}}">   Edit</a>{{/if}}  </p>
           <p>{{pluralize votes "Vote"}}, submitted by {{author}}, {{category}} </p>
           <p> Description: {{description}} </p>
+
         </div>
+
       </div>
     </div>
-     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">View Post</a> 
+     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-success">View Post</a> 
   </div>
-</template>
+</template>-->
