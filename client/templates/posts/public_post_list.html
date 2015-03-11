@@ -13,27 +13,25 @@
       </h1>
 
       <h4 class="section-heading" style="color:#fff;font-size:15px;font-weight:lighter">
-        <a style="font-size:18px" href="/addChallenge" class="btn-warning">Click Here</a> to complete your own challenge!
+        <a style="font-size:18px" href="/addChallenge" class="btn btn-primary">Click Here to complete your own challenge!</a>
       </h4>
   </div>
 
   <div id="wrapper1">
-            <div id="columns1">
-      <!-- {{#if ownPost}} -->
+      <div id="columns1">
+   
       {{#each posts}}
         {{> postItem}}
       {{/each}}
-      <!-- {{/if}} -->
- 
     
-    {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
-    {{else}}
-      {{#unless ready}}
-        {{> spinner}}
-      {{/unless}}
-    {{/if}}
-  </div>
+      {{#if nextPath}}
+        <a class="load-more" href="{{nextPath}}">Load more</a>
+      {{else}}
+        {{#unless ready}}
+          {{> spinner}}
+        {{/unless}}
+      {{/if}}
+      </div>
   </div>
 </section>
 </template>

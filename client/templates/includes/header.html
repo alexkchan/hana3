@@ -16,20 +16,24 @@
             <a href="{{pathFor 'bestPosts'}}">Best</a>
           </li> -->
 
+          {{#if currentUser}}
+
+            <li class="{{activeRouteClass 'newPosts'}}">
+              <a href="{{pathFor 'newPosts'}}"><i class="fa fa-user"></i> Profile</a>
+            </li>
+
+          {{/if}}
+
+                <li class="{{activeRouteClass 'bestPosts'}}">
+            <a href="{{pathFor 'bestPosts'}}"><i class="fa fa-globe"></i> Community</a>
+          </li>
+      
+
              <li class="{{activeRouteClass 'addChallenge'}}">
               <a href="{{pathFor 'addChallenge'}}"> <i class="fa fa-star"></i> Add a Challenge</a>
             </li>
 
-            <li class="{{activeRouteClass 'bestPosts'}}">
-            <a href="{{pathFor 'bestPosts'}}"><i class="fa fa-globe"></i> Community</a>
-          </li>
-          {{#if currentUser}}
-
-          <li class="{{activeRouteClass 'newPosts'}}">
-            <a href="{{pathFor 'newPosts'}}"><i class="fa fa-user"></i> Profile</a>
-          </li>
-
-          {{/if}}
+      
 
           <li class="{{activeRouteClass  'aboutPage'}}">
             <a href="{{pathFor 'aboutPage'}}"><i class="fa fa-heart"></i> About Us</a>
